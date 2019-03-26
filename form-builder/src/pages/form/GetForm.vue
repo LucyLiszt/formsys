@@ -1,13 +1,22 @@
 <template>
-  <div>
+<div class="container">
+  <div class="pull-right"><img src="..\..\assets\logo.jpg" height="20px"/></div>
+  <div class="row form_text">
+    <div class="col-xs-1 col-sm-2 col-md-4"></div>
+    <div class="col-xs-10 col-sm-8 col-md-4">
     <FormItems v-for='(item,index) in items'
       :key='index'
       :index='index'
       :item='item'
       ref='FormItems'>
     </FormItems>
-    <button @click='uploadinput'>提交</button>
+    <div class="form-group form_text">
+    <button type="button" class="btn btn-warning" id="buttonDown">提交</button>
+    </div>
+    </div>
+    <div class="col-xs-1 col-sm-2 col-md-4"></div>
   </div>
+</div>
 </template>
 
 <script>
@@ -70,3 +79,9 @@ export default {
 //   }
 }
 </script>
+<style>
+#buttonDown{
+  margin-top: 6vh
+}
+
+</style>

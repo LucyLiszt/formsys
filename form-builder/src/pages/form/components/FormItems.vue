@@ -1,8 +1,11 @@
 <template>
   <div>
     <!-- <h1>Component:{{index}}</h1> -->
-    <p>{{index+1}}.
-      <input
+    <p>
+      <div class="pull-left">
+      <label class="text-primary">{{item.placeholder}}</label>
+      </div>
+      <input class="form-control"
         :type=item.type
         :placeholder=item.placeholder
         :name=item.name

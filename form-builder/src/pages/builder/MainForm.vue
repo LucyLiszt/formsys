@@ -1,5 +1,6 @@
 <template>
-  <div>
+<div>
+  <div class="buildBox">
     <ViewBox v-for='(item,index) in items'
       :key='index'
       :index='index'
@@ -7,16 +8,17 @@
       @delitem='delitem'>
     </ViewBox>
     <input type='text' placeholder='Input placeholer for textbox' v-model='newplaceholder'>
-    <button @click='addtextbox'>insert textbox</button>
+    <button class="btn btn-default" @click='addtextbox'>insert textbox</button>
     <div>
       <input type='text' placeholder='Input form name' v-model='formname'>
-      <button @click='createform'>Create</button>
+      <button class="btn btn-default" @click='createform'>Create</button>
     </div>
     <div>
       <!-- <p>{{'This form\'s key is: ' + fkey}}</p> -->
       <a v-if='fkey' @click="gotoform">This form's key is: {{fkey}}</a>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -77,3 +79,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .mainBox{
+    text-align: center
+  }
+</style>

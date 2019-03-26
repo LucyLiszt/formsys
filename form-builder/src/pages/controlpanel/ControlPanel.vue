@@ -1,11 +1,10 @@
 <template>
   <div>
     <h3>this is panel</h3>
-    <button @click='tobuilder'>to builder</button>
-    <button @click='todatachecker'>data checker</button>
+    <button class="button primary" @click='tobuilder'>to builder</button>
+    <button class="button primary" @click='todatachecker'>data checker</button>
   </div>
 </template>
-
 <script>
 export default {
   name: 'ControlPanel',
